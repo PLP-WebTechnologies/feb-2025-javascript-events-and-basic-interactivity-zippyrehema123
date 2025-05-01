@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Economy Interactive Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🌊 Blue Economy Hub</div>
+            <div class="nav-items">
+                <button class="tab-btn active" data-tab="home">Home</button>
+                <button class="tab-btn" data-tab="about">About</button>
+                <button class="tab-btn" data-tab="contact">Contact</button>
+            </div>
+            <div id="theme-toggle">🌙</div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME TAB -->
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <h1>Exploring the <span class="highlight">Blue Economy</span></h1>
+                <p>Sustainable use of ocean resources for economic growth, improved livelihoods, and ocean ecosystem health.</p>
+                <button id="learn-more-btn" class="btn primary-btn">Learn More</button>
+            </div>
+
+            <!-- IMAGE GALLERY -->
+<div class="image-gallery">
+    <div class="gallery-item">
+        <img src="images/image1.jpeg" alt="Sustainable Fishing">
+        <p>Sustainable Fishing Practices</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/image2.jpeg" alt="Offshore Energy">
+        <p>Offshore Renewable Energy</p>
+    </div>
+    <div class="gallery-item">
+        <img src="images/image3.jpeg" alt="Maritime Transport">
+        <p>Maritime Transportation</p>
+    </div>
+</div>
+
+
+            <div class="key-stats">
+                <h2>Blue Economy Impact</h2>
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3>$2.5 Trillion</h3>
+                        <p>Annual economic value of ocean assets</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>40 Million</h3>
+                        <p>Jobs in fisheries sector globally</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>30%</h3>
+                        <p>Of CO₂ emissions absorbed by oceans</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-section">
+                <h2>Key Sectors</h2>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">Sustainable Fisheries</div>
+                        <div class="accordion-content">
+                            <p>Sustainable fisheries management ensures the long-term viability of fish populations while providing food security and livelihoods for millions. This includes catch limits, reducing bycatch, and promoting aquaculture practices that minimize environmental impacts.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Renewable Ocean Energy</div>
+                        <div class="accordion-content">
+                            <p>Ocean renewable energy includes offshore wind, tidal, wave, and thermal energy conversion. These technologies harness the power of our oceans to produce clean electricity, reducing dependence on fossil fuels and contributing to climate change mitigation.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Maritime Transport</div>
+                        <div class="accordion-content">
+                            <p>Shipping accounts for approximately 80% of global trade by volume. Innovations in vessel design, alternative fuels, and smart port technologies are making maritime transport more efficient and environmentally friendly.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Coastal Tourism</div>
+                        <div class="accordion-content">
+                            <p>Sustainable coastal tourism balances economic benefits with environmental protection. This includes eco-tourism initiatives, marine protected areas, and community-based tourism that preserves cultural heritage and generates local income.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT TAB -->
+        <section id="about" class="tab-content">
+            <h1>About the Blue Economy</h1>
+            <div class="content-box">
+                <p>The Blue Economy represents the sustainable use of ocean resources for economic growth, improved livelihoods, and jobs while preserving the health of ocean ecosystems.</p>
+                <p>The concept emphasizes the balance between economic benefits and environmental sustainability, recognizing that healthy oceans are more productive oceans.</p>
+                <p>Press the <kbd>B</kbd> key anywhere on our site to see a quick blue economy fact!</p>
+            </div>
+            <div id="fact-box" class="hidden">
+                <h3>Did You Know?</h3>
+                <p id="fact-content">Oceans generate 50% of the oxygen we breathe and absorb 30% of carbon dioxide produced by humans.</p>
+                <button id="close-fact" class="btn">Close</button>
+            </div>
+        </section>
+
+        <!-- CONTACT TAB -->
+        <section id="contact" class="tab-content">
+            <h1>Join the Blue Movement</h1>
+            <div class="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name*</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address*</label>
+                        <input type="email" id="email" placeholder="your.email@example.com" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Create Password*</label>
+                        <input type="password" id="password" placeholder="Minimum 8 characters" required>
+                        <span class="error-message" id="password-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="interests">Areas of Interest</label>
+                        <select id="interests">
+                            <option value="">Select your interest</option>
+                            <option value="conservation">Ocean Conservation</option>
+                            <option value="energy">Renewable Energy</option>
+                            <option value="fisheries">Sustainable Fisheries</option>
+                            <option value="tourism">Coastal Tourism</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="Tell us how you'd like to contribute"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary-btn" id="submit-btn">Submit</button>
+                </form>
+                <div id="form-success" class="hidden">
+                    <h3>Thank You!</h3>
+                    <p>Your information has been submitted successfully. We'll be in touch soon!</p>
+                    <button id="new-form" class="btn">Submit Another</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Double-click anywhere to show your support for ocean conservation! 🐠</p>
+        <p>&copy; 2025 Blue Economy Hub - Created for educational purposes</p>
+    </footer>
+
+    <div id="easter-egg" class="hidden">
+        <div class="ocean-animation">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <p>Thank you for supporting ocean conservation! 🐳</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
